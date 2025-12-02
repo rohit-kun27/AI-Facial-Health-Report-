@@ -1,8 +1,8 @@
 import cv2
 from deepface import DeepFace
 from fer import FER
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
+# from reportlab.lib.pagesizes import letter
+# from reportlab.pdfgen import canvas
 
 # ---------------------------------
 # AGE RANGE
@@ -122,7 +122,7 @@ def analyze_face(image):
         res = DeepFace.analyze(
             image,
             actions=['age', 'gender'],
-            detector_backend='retinaface',
+            detector_backend='opencv',
             enforce_detection=False
         )[0]
 
